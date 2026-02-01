@@ -6,6 +6,13 @@ var Book = /** @class */ (function () {
         this.author = author;
         this.price = price;
     }
+    Object.defineProperty(Book.prototype, "setId", {
+        set: function () {
+            this.id = id;
+        },
+        enumerable: false,
+        configurable: true
+    });
     return Book;
 }());
 var Library = /** @class */ (function () {

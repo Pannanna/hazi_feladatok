@@ -2,9 +2,9 @@ console.log("Házi feladat");
 
 
 class Book {
-  id: string;
-  title: string;
-  author: string;
+  private id: string;
+  private title: string;
+  private author: string;
   price: number;
 
   constructor(id: string, title: string, author: string, price: number) {
@@ -12,6 +12,12 @@ class Book {
     this.title = title;
     this.author = author;
     this.price = price;
+  }
+
+  set setId(id: string, iddExists: (id: string) => boolean) {
+    if (iddExists(id)) {
+      this.id = id;
+    }
   }
 }
 
