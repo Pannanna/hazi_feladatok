@@ -1,3 +1,3 @@
-console.log("Házi feladat");
+console.log("Házi feladat- To do lista");
 
 
